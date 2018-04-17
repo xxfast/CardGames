@@ -4,15 +4,15 @@ using System.Collections.Generic;
 namespace PlayingCards
 {
     public class HighCardPlayer {
-        private PlayingCardsDeck hand = new PlayingCardsDeck();
+        private StackedHand hand = new StackedHand();
         private int score = 0;
-        public PlayingCardsDeck Hand { get {return hand;} } 
+        public StackedHand Hand { get {return hand;} } 
         public int Score { get {return score;} set { score = value; } } 
     }
 
     public class HighCard
     {
-		private HighCardPlayer player1 = new HighCardPlayer();
+        private HighCardPlayer player1 = new HighCardPlayer();
 		private HighCardPlayer player2 = new HighCardPlayer();
         private PlayingCardsDeck deck = PlayingCardsDeck.Generate();
         private int round = 1;
@@ -32,14 +32,14 @@ namespace PlayingCards
             deck.Shuffle();
             int divition = deck.Cards.Count / 2;
             for (int i = 0; i < divition; i++){
-				player1.Hand.Cards.Push(deck.Draw());
-				player2.Hand.Cards.Push(deck.Draw());
+                player1.Hand.Add(deck.Draw());
+				player2.Hand.Add(deck.Draw());
             }
         }
 
         public bool NextRound(){
             Console.WriteLine("Round {0}", round++);
-			PlayingCard p1 = player1.Hand.Draw();
+            PlayingCard p1 = player1.Hand.Draw();
 			PlayingCard p2 = player2.Hand.Draw();
 
             Console.WriteLine("Draw = p1- {0}  p2- {1}", p1, p2);
@@ -56,5 +56,15 @@ namespace PlayingCards
             Console.WriteLine("Scores = p1- {0}  p2- {1}", player1.Score, player2.Score);
             return player1.Hand.Cards.Count > 0;
         }
+
+        public void Finish()
+        {
+            if(player1.Score == player2.Score){
+                Console.WriteLine("Draw!");
+            }else{
+                Console.WriteLine("Player {0} won!", (player1.Score > player2.Score) ? "1" : "2");
+            }
+
+		}
     }
 }

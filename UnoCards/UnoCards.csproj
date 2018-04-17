@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{1E56B1C1-6324-47DA-A365-96AE625D90DE}</ProjectGuid>
+    <ProjectGuid>{A6A995C6-E362-4433-8FA6-7C34C2931F75}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CardGames</RootNamespace>
-    <AssemblyName>CardGames</AssemblyName>
+    <RootNamespace>UnoCards</RootNamespace>
+    <AssemblyName>UnoCards</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,13 +34,26 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Card.cs" />
-    <Compile Include="Model\Deck.cs" />
-    <Compile Include="Games\CardGame.cs" />
+    <Compile Include="Model\UnoCard.cs" />
+    <Compile Include="Model\UnoActionCard.cs" />
+    <Compile Include="Model\UnoRankCard.cs" />
+    <Compile Include="Model\UnoColor.cs" />
+    <Compile Include="Model\UnoRank.cs" />
+    <Compile Include="Utils\UnoExtentions.cs" />
+    <Compile Include="Model\UnoAction.cs" />
+    <Compile Include="Model\UnoDeck.cs" />
+    <Compile Include="Games\UnoGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="Utils\" />
     <Folder Include="Games\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardGames\CardsCore.csproj">
+      <Project>{1E56B1C1-6324-47DA-A365-96AE625D90DE}</Project>
+      <Name>CardsCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

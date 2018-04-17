@@ -9,6 +9,7 @@ namespace PlayingCards
             HighCard hc = new HighCard();
             hc.Start();
             while (hc.NextRound()) {}
+            hc.Finish();
         }
     }
 }

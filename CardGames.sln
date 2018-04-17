@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsCoreTest", "CardGamesC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayingCards", "PlayingCards\PlayingCards.csproj", "{4CA46C12-B23E-421C-9798-9E2381F77345}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoCards", "UnoCards\UnoCards.csproj", "{A6A995C6-E362-4433-8FA6-7C34C2931F75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -25,5 +27,9 @@ Global
 		{4CA46C12-B23E-421C-9798-9E2381F77345}.Debug|x86.Build.0 = Debug|x86
 		{4CA46C12-B23E-421C-9798-9E2381F77345}.Release|x86.ActiveCfg = Release|x86
 		{4CA46C12-B23E-421C-9798-9E2381F77345}.Release|x86.Build.0 = Release|x86
+		{A6A995C6-E362-4433-8FA6-7C34C2931F75}.Debug|x86.ActiveCfg = Debug|x86
+		{A6A995C6-E362-4433-8FA6-7C34C2931F75}.Debug|x86.Build.0 = Debug|x86
+		{A6A995C6-E362-4433-8FA6-7C34C2931F75}.Release|x86.ActiveCfg = Release|x86
+		{A6A995C6-E362-4433-8FA6-7C34C2931F75}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

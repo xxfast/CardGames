@@ -39,7 +39,7 @@
     <Compile Include="Model\Rank.cs" />
     <Compile Include="Model\Suit.cs" />
     <Compile Include="Games\BlackJack.cs" />
-    <Compile Include="Model\Hand.cs" />
+    <Compile Include="Model\StackedHand.cs" />
     <Compile Include="Games\HighCard.cs" />
   </ItemGroup>
   <ItemGroup>

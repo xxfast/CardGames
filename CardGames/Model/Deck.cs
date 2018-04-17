@@ -16,10 +16,14 @@ namespace CardsCore
             }
         }
 
+
         public T Draw(){
             return Cards.Pop();
         }
 
+        /// <summary>
+        /// Shuffle this instance.
+        /// </summary>
         public void Shuffle()
         {
             T[] values = Cards.ToArray();

@@ -1,8 +1,7 @@
 ﻿using System;
 namespace PlayingCards
 {
-	public enum Rank { 
-        One, 
+	public enum Rank {
         Two,
         Three,
         Four,

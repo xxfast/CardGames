@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using CardsCore;
+
 namespace PlayingCards
 {
-    public class BlackJack
+    public class BlackJack : CardGame
     {
-        List<Hand> players = new List<Hand>();
+        List<StackedHand> players = new List<StackedHand>();
         PlayingCardsDeck deck = new PlayingCardsDeck();
 
-        public BlackJack()
-        {
+        public override void Start(){
+            deck.Shuffle();
+            // TODO : Everything else
         }
 
-        public void Start(){
-            deck.Shuffle();
-            foreach(PlayingCard c in deck.Cards){
-                Console.WriteLine(c);
-            }
-        }
+		public override void Finish()
+		{
+			deck.Shuffle();
+			// TODO : Everything else
+		}
     }
 }
